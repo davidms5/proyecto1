@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>prueba 1</title>
+</head>
+<body background="https://images.pexels.com/photos/12824309/pexels-photo-12824309.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+
+    <h1 style="color:blue">
+        <b>esta es una prueba con html en medio con plantillas</b>
+    </h1>
+
+    <section style="color:brown">
+     <p>el nombre del autor de este proyecto es: <b>{{nombre_persona}}</b></p>   
+     <p>la fecha actual es: {{fecha.year}} / {{fecha.time}}</p>
+     
+     <h1><b>lista de prueba:</b></h1>
+
+     <p>
+        <ol> 
+        {% if lista %} 
+            {% for elemento in lista %}
+
+
+            <li>{{elemento}}</li>
+
+
+            {% endfor %}
+
+        {% else %}
+            <p>vuelve mas tarde</p>    
+
+        {% endif %}
+        </ol>
+     </p>
+    </section>
+</body>
+</html>
